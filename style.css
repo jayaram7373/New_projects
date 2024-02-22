@@ -91,6 +91,30 @@ nav ul li a:hover::after{
             margin-left: 10px;
         }
 }
+@media only screen and  (max-width:360px){ 
+    .header_text{
+    background-image: url("jayypic2.jpg");
+    background-size:contain;
+    background-position:center ;  
+    background-repeat: no-repeat;
+    }
+    .tab-top{
+        margin:0px 0px;
+    }
+    
+    #text {
+    
+        word-wrap: break-word;
+        font-size: 18px;
+        width: 100px;
+     }
+        #header1{
+            margin-left: 10px;
+        }
+        .div123{
+            margin-left: 10px;
+        }
+}
 
 
 
@@ -214,7 +238,7 @@ nav ul li a:hover::after{
 .tab-top{
   
     display: flex;
-    margin:0px 8px  ;
+    margin:0px 0px  ;
     position:relative;
 }
 .tab-link1{
@@ -480,7 +504,8 @@ i{
     
   }
   .foot i{
-    font-size: 20px;
+    font-size: 14px;
+    color: #ff004f;
   }
 
 
