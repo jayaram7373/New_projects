@@ -76,6 +76,34 @@ document.getElementById("addbutton").addEventListener("click", function addsubmi
  
    userDataElement.innerHTML = "Name: " + parsedData.name + "<br>Email: " + parsedData.email + "<br>Textarea: " + parsedData.textarea;
  });
+
+
+
+ document.getElementById("addbutton").addEventListener("click", function addsubmit(){
+   var importdata = {
+     name: document.getElementById("name").value,
+     email: document.getElementById("mail").value,
+     textarea: document.getElementById("textarea").value
+   };
+   console.log(importdata);
+   let httpRequest=new XMLHttpRequest();
+   // Specify the Firebase Realtime Database URL with the desired path
+   httpRequest.open('POST', "https://my-portfolio-website-6fd71-default-rtdb.firebaseio.com/data.json");
+   // Specify content-type
+   httpRequest.setRequestHeader('content-type','application/json');
+   // Send the data as JSON
+   httpRequest.send(JSON.stringify(importdata));
+   httpRequest.onreadystatechange = function(){
+      if(httpRequest.readyState === 4){
+         if(httpRequest.status === 200){
+            window.alert('post data successfully');
+         } else {
+            window.alert('error');
+         }
+      }
+   };
+});
+
  
 
  
